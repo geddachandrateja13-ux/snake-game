@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-neon-cyan: #22d3ee;
+  --color-neon-magenta: #ec4899;
+  --color-neon-purple: #9333ea;
+  --color-glass-white: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-[#050508] text-white font-sans overflow-hidden antialiased;
+  }
+}
+
+.glass-box {
+  @apply backdrop-blur-2xl bg-black/40 border border-white/5;
+}
+
+.glass-card {
+  @apply backdrop-blur-3xl bg-white/5 border border-white/10 rounded-2xl shadow-2xl;
+}
+
+.text-glow-cyan {
+  @apply text-neon-cyan drop-shadow-[0_0_8px_rgba(34,211,238,0.5)];
+}
+
+.text-glow-magenta {
+  @apply text-neon-magenta drop-shadow-[0_0_8px_rgba(236,72,153,0.5)];
+}
+
+.track-gradient-1 { @apply bg-gradient-to-tr from-pink-500 to-cyan-400 shadow-[0_0_15px_rgba(236,72,153,0.3)]; }
+.track-gradient-2 { @apply bg-gradient-to-br from-pink-500 to-purple-600 shadow-lg; }
+.track-gradient-3 { @apply bg-gradient-to-br from-cyan-400 to-blue-600 shadow-lg; }
+.track-gradient-4 { @apply bg-gradient-to-br from-orange-400 to-red-600 shadow-lg; }
+
